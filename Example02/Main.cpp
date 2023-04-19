@@ -9,6 +9,9 @@
 #include "PipelineState.h"
 #include "BufferManager.h"
 
+#include "DQ_Scene.h"
+#include "DQ_Renderer.h"
+
 using namespace GameCore;
 using namespace Graphics;
 
@@ -29,6 +32,7 @@ public:
     
 
 private:
+    DQ::Renderer *p_Renderer = nullptr;
 };
 
 CREATE_APPLICATION( Example02 )
@@ -36,6 +40,8 @@ CREATE_APPLICATION( Example02 )
 void Example02::Startup( void )
 {
     // Setup your data
+    p_Renderer = new DQ::Renderer;
+
 }
 
 void Example02::Cleanup( void )
@@ -53,7 +59,6 @@ void Example02::Update( float /*deltaT*/ )
 void Example02::RenderScene( void )
 {
     GraphicsContext& gfxContext = GraphicsContext::Begin(L"Scene Render");
-
     gfxContext.TransitionResource(g_SceneColorBuffer, D3D12_RESOURCE_STATE_RENDER_TARGET, true);
     gfxContext.ClearColor(g_SceneColorBuffer);
     gfxContext.SetRenderTarget(g_SceneColorBuffer.GetRTV());
