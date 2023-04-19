@@ -284,6 +284,22 @@
     <FxCompile Include="Shaders\DownsampleDepthPS.hlsl">
       <ShaderType>Pixel</ShaderType>
     </FxCompile>
+    <FxCompile Include="Shaders\DQ_GBufferPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.6</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">6.6</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">6.6</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\DQ_GBufferVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.6</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">6.6</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">6.6</ShaderModel>
+    </FxCompile>
     <FxCompile Include="Shaders\ExtractLumaCS.hlsl" />
     <FxCompile Include="Shaders\FXAAPass1_Luma2_CS.hlsl" />
     <FxCompile Include="Shaders\FXAAPass1_Luma_CS.hlsl" />
@@ -414,6 +430,7 @@
     <None Include="Shaders\CommonRS.hlsli" />
     <None Include="Shaders\DoFCommon.hlsli" />
     <None Include="Shaders\DoFRS.hlsli" />
+    <None Include="Shaders\DQ.hlsli" />
     <None Include="Shaders\FXAAPass1CS.hlsli" />
     <None Include="Shaders\FXAAPass2CS.hlsli" />
     <None Include="Shaders\FXAARootSignature.hlsli" />

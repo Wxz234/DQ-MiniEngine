@@ -32,7 +32,7 @@ public:
     
 
 private:
-    DQ::Renderer *p_Renderer = nullptr;
+    DQ::Renderer m_Renderer;
 };
 
 CREATE_APPLICATION( Example02 )
@@ -40,8 +40,7 @@ CREATE_APPLICATION( Example02 )
 void Example02::Startup( void )
 {
     // Setup your data
-    p_Renderer = new DQ::Renderer;
-
+    m_Renderer.Create();
 }
 
 void Example02::Cleanup( void )

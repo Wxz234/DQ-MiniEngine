@@ -451,6 +451,12 @@
     <FxCompile Include="Shaders\PresentSDRPS.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
+    <FxCompile Include="Shaders\DQ_GBufferPS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DQ_GBufferVS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitonicSort.cpp" />
@@ -670,6 +676,9 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\PresentRS.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\DQ.hlsli">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
